@@ -1,7 +1,7 @@
 import React from "react";
 
 import collapsableMenuStyles from '../../storage/style/content/collapsableMenu.module.css';
-import historyMenuStyles from '../../storage/style/content/historyContent.module.css'
+import historyMenuStyles from '../../storage/style/content/historyMenu.module.css'
 
 import historyData from '../../storage/data/history.json';
 import CollapsableMenu from "./default/CollapsableMenu.js";
@@ -9,7 +9,7 @@ import CollapsableMenuEntry from "./default/CollapsableMenuEntry.js";
 
 import reactUtils from "../../storage/scripts/utils/reactUtils.js";
 
-export default class HistoryContent extends React.Component {
+export default class HistoryMenu extends React.Component {
     constructor(props) {
         super(props);
 
@@ -50,11 +50,15 @@ export default class HistoryContent extends React.Component {
     createHeader(entry) {
         return <>
             <div className={collapsableMenuStyles.titleSection}>
-                <h2 className={collapsableMenuStyles.title}>{entry.title}</h2>
-                <span> {this.parseDate(entry)} </span>
+                <section>
+                    <h2 className={collapsableMenuStyles.title}>{entry.title}</h2>
+                    <span>{this.parseDate(entry)}</span>
+                </section>
+                <section>
+                    <img className={historyMenuStyles.companyLogo} src={reactUtils.loadCompanyLogo(entry.logo)} />
+                    <p className={historyMenuStyles.companyName}>{entry.company}</p>
+                </section>
             </div>
-            <img className={historyMenuStyles.companyLogo} src={reactUtils.loadCompanyLogo(entry.logo)} />
-            <p className={historyMenuStyles.companyName}>{entry.company}</p>
             {reactUtils.loadSVGWave(false)}
         </>;
     }
@@ -64,26 +68,25 @@ export default class HistoryContent extends React.Component {
             {reactUtils.loadSVGWave(true)}
             <div className={collapsableMenuStyles.contentBody}>
                 <h3>Responsabilities:</h3>
-                {entry.description.map(description => {
-                    return (<>
-                        <p>◐ {description}</p>
-                    </>)
+                {entry.description.map((description, i) => {
+                    return <p key={`entry_description_${i}`}>◐ {description}</p>;
                 })}
                 <div className={collapsableMenuStyles.splitContent}>
                     <div>
                         <h3>Technical skills:</h3>
-                        {entry.softSkills.map(skill => {
-                            return (<>
-                                <p>↪ <span className={collapsableMenuStyles.highlightedSpan}>{skill}</span> ↩</p>
-                            </>)
+                        {entry.softSkills.map((skill, i) => {
+                            return <p key={`soft_skill_${i}`} >↪&nbsp;<span
+                                key={`span_soft_skill_${i}`}
+                                className={collapsableMenuStyles.highlightedSpan}
+                            >{skill}</span>&nbsp;↩</p>;
                         })}
                     </div>
                     <div>
                         <h3>Soft skills:</h3>
-                        {entry.technicalSkills.map(skill => {
-                            return (<>
-                                <p>↪ <span className={collapsableMenuStyles.highlightedSpan}>{skill}</span> ↩</p>
-                            </>)
+                        {entry.technicalSkills.map((skill, i) => {
+                            return <p key={`tech_skill_${i}`} >↪&nbsp;<span
+                                key={`span_tech_skill_${i}`}
+                                className={collapsableMenuStyles.highlightedSpan}>{skill}</span>&nbsp;↩</p>;
                         })}
                     </div>
                 </div>

@@ -1,0 +1,95 @@
+:root {
+    --profileImageWidth: 20rem;
+    --imageBlockMargin: 3rem;
+    --contentMargin: 2rem;
+}
+
+.headerSection {
+    color: var(--white-00);
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-items: space-between;
+}
+
+.contentSection {
+    color: var(--white-00);
+    padding: var(--contentMargin);
+}
+
+.imageBlock {
+    margin: var(--imageBlockMargin);
+    height: var(--profileImageWidth);
+    width: var(--profileImageWidth);
+}
+
+.imageBackground {
+    height: var(--profileImageWidth);
+    width: var(--profileImageWidth);
+}
+
+.imageBackground:nth-child(2) {
+    background-color: var(--blue-00);
+    transform: rotate(17deg);
+    position: relative;
+    z-index: 0;
+    top: calc(-1*var(--profileImageWidth));
+}
+
+.imageBackground:nth-child(3) {
+    background-color: var(--blue-03);
+    transform: rotate(-12deg);
+    position: relative;
+    z-index: 0;
+    top: calc(-2*var(--profileImageWidth));
+}
+
+.profileImage {
+    max-width: var(--profileImageWidth);
+    position: relative;
+    z-index: 1;
+}
+
+.descriptionSection {
+    width: 50%;
+}
+
+.title {
+    margin: var(--contentMargin);
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    font-size: 3rem;
+    text-align: left;
+    font-family: 'League Spartan';
+}
+
+.descriptionList {
+    list-style: circle;
+    font-size: 2rem;
+}
+
+.student {
+    color: var(--blue-03);
+    font-family: math;
+}
+
+.dev {
+    color: var(--blue-00);
+    font-family: monospace;
+}
+
+.others {
+    color: var(--blue-02);
+    font-family: 'Ink Free';
+}
+
+.contentTitle {
+    color: var(--white-03);
+}
+
+.contentSection i{
+    color: var(--blue-00);
+    font-weight: bold;
+}

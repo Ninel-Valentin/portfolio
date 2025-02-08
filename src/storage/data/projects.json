@@ -133,7 +133,7 @@
             "createdDate": "Feb. 2023",
             "shortDescription": "A visual representation of the Wave Function Collapse algorithm",
             "description": [
-                "Generating random 2D tile maps"
+                "Procedurally generating 2D tile maps"
             ],
             "technologies": [
                 "JavaScript"

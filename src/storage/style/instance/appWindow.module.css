@@ -2,6 +2,13 @@
     --menu-bar-height: 2rem;
 }
 
+@media only screen and (min-width: 600px) {
+    .appInstanceWindow {
+        width: 900px;
+    }
+}
+
+
 .appInstanceWindow {
     min-width: min(80vh, 80vw);
     min-height: calc(.8 * min(80vh, 80vw));

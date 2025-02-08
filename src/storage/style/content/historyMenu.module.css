@@ -1,6 +1,5 @@
 .date {
     display: inline-block;
-    width: 5rem;
 }
 
 .date:first-child {
@@ -20,6 +19,5 @@
 
 .companyLogo {
     display: block;
-    padding: var(--menuHeader_padding);
     width: 30%;
 }

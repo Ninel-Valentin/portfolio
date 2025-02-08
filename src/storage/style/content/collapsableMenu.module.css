@@ -135,11 +135,13 @@
 .collapsableMenuHeader>div>svg {
     position: relative;
     bottom: calc(-1* var(--menuHeader_padding_vertical));
+    transform: translate(0, 1px);
 }
 
 .collapsableMenuContent>div>svg {
     position: relative;
     top: var(--menuHeader_padding_vertical);
+    transform: translate(0, 1px);
 }
 
 .collapsableMenuContent {
@@ -160,11 +162,28 @@
     padding: var(--menuHeader_padding);
 }
 
-.titleSection>span {
+.titleSection>section {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titleSection>section:last-child {
+    align-items: flex-end;
+}
+
+.titleSection>section:first-child {
+    align-items: flex-start;
+}
+
+.titleSection span {
+    padding: calc(2*var(--menuHeader_padding_vertical)) 0;
     font-weight: bold;
 }
 
 .title {
+    width: fit-content;
     font-weight: 700;
     margin: 0;
 }

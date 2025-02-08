@@ -27,11 +27,14 @@ import CSLogo from '../../img/logo/channelsight.png';
 import MCLogo from '../../img/logo/mcdonalds.png';
 import ProfiLogo from '../../img/logo/profi.png';
 
+import ProfileImage from '../../img/profile/profile.jpeg';
+
 import PlaceholderContent from '../../../components/content/temp/PlaceholderContent.js';
 
-import HistoryContent from '../../../components/content/HistoryContent.js';
+import HistoryMenu from '../../../components/content/HistoryMenu.js';
 import AppInstanceIcon from '../../../components/icons/AppInstanceIcon.js';
 import ProjectsContent from '../../../components/content/ProjectsContent.js';
+import AboutMe from '../../../components/content/AboutMe.js';
 
 export default class reactUtils {
 
@@ -82,11 +85,14 @@ export default class reactUtils {
     static loadApplicationContent(name, appUtils) {
         switch (Consts.applications.name[name]) {
             case Consts.applications.name["history"]:
-                return <HistoryContent
-                    key={`historyContent_${name}`}
+                return <HistoryMenu
+                    key={`historyMenu_${name}`}
                     appUtils={appUtils} />;
             case Consts.applications.name["projects"]:
                 return <ProjectsContent
+                    appUtils={appUtils} />;
+            case Consts.applications.name["about"]:
+                return <AboutMe
                     appUtils={appUtils} />;
             default:
                 return <PlaceholderContent />;
@@ -100,6 +106,10 @@ export default class reactUtils {
             case 'channelsight':
                 return CSLogo;
         }
+    }
+
+    static loadProfileImage() {
+        return ProfileImage;
     }
 
     static loadSVGWave(flipped) {

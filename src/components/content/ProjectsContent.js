@@ -1,7 +1,6 @@
 import React from "react";
 
 import collapsableMenuStyles from '../../storage/style/content/collapsableMenu.module.css';
-import projectsMenuStyles from '../../storage/style/content/projectsMenu.module.css';
 
 import projectsData from '../../storage/data/projects.json';
 import CollapsableMenu from "./default/CollapsableMenu";
@@ -50,10 +49,12 @@ export default class ProjectsContent extends React.Component {
     createHeader(entry) {
         return <>
             <div className={collapsableMenuStyles.titleSection}>
-                <h2 className={collapsableMenuStyles.title}> {entry.title} </h2>
-                <span> {this.parseDate(entry)} </span>
+                <section>
+                    <h2 className={collapsableMenuStyles.title}> {entry.title} </h2>
+                    <span> {this.parseDate(entry)} </span>
+                    <p> {entry.shortDescription} </p>
+                </section>
             </div>
-            <span> {entry.shortDescription} </span>
             {reactUtils.loadSVGWave(false)}
         </>;
     }
@@ -63,18 +64,16 @@ export default class ProjectsContent extends React.Component {
             {reactUtils.loadSVGWave(true)}
             <div className={collapsableMenuStyles.contentBody}>
                 <h3>Description:</h3>
-                {entry.description.map(description => {
-                    return (<>
-                        <p>◐ {description}</p>
-                    </>)
+                {entry.description.map((description, i) => {
+                    return <p key={`description_${i}`}>◐&nbsp;{description}</p>;
                 })}
                 <div className={collapsableMenuStyles.splitContent}>
                     <div>
                         <h3>Technologies:</h3>
-                        {entry.technologies.map(technology => {
-                            return (<>
-                                <p>↪ <span className={collapsableMenuStyles.highlightedSpan}>{technology}</span> ↩</p>
-                            </>)
+                        {entry.technologies.map((technology, i) => {
+                            return <p key={`technologies_${i}`}>↪&nbsp;<span
+                                key={`span_technologies_${i}`}
+                                className={collapsableMenuStyles.highlightedSpan}>{technology}</span>&nbsp;↩</p>
                         })}
                     </div>
                 </div>
@@ -84,7 +83,7 @@ export default class ProjectsContent extends React.Component {
 
     parseDate(entry) {
         return (<>
-            <span className={projectsMenuStyles.date}>{entry.createdDate}</span>
+            <span>{entry.createdDate}</span>
         </>);
     }
 }

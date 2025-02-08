@@ -12,13 +12,14 @@
 
 @media only screen and (min-width: 600px) {
     :root {
-        --windowIcon_font_size: 1rem;
-        --windowIcon_width: 6rem;
+        --windowIcon_font_size: .75rem;
+        --windowIcon_width: 4rem;
+        --windowIcon_padding: .5rem;
     }
 }
 
 .windowIcon {
-    padding: .5rem;
+    padding: var(--windowIcon_padding);
     border-radius: 5px;
     width: var(--windowIcon_width);
     height: var(--windowIcon_height);
