@@ -47,6 +47,7 @@ export default class DefaultInstanceWindow extends React.Component {
         if (this.appUtils.getInstanceWithId(this.id).isResizable)
             className += ' resizeable';
 
+
         return (<>
             <div
                 data-select={`appInstanceWindow_${this.id}`}

@@ -20,11 +20,6 @@ export default class AppInstanceWindow extends DefaultInstanceWindow {
 
     loadContent = () => {
         return reactUtils.loadApplicationContent(this.name, this.appUtils);
-        // return (<iframe
-        //     className={styles.inactiveFrame}
-        //     src={this.src}
-        //     allowFullScreen={true}
-        // ></iframe>);
     }
 }
 
