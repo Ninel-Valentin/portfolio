@@ -46,11 +46,11 @@
     stop-color: var(--blue-12);
 }
 
-.collapsableMenuEntry:nth-child(odd) path {
+.collapsableMenuEntry:nth-child(odd) .wave path {
     fill: url('#dark-gradient');
 }
 
-.collapsableMenuEntry:nth-child(odd):hover path {
+.collapsableMenuEntry:nth-child(odd):hover .wave path {
     fill: url('#dark-hover-gradient');
 }
 
@@ -95,11 +95,11 @@
     stop-color: var(--blue-00);
 }
 
-.collapsableMenuEntry:nth-child(even) path {
+.collapsableMenuEntry:nth-child(even) .wave path {
     fill: url('#light-gradient');
 }
 
-.collapsableMenuEntry:nth-child(even):hover path {
+.collapsableMenuEntry:nth-child(even):hover .wave path {
     fill: url('#light-hover-gradient');
 }
 
@@ -117,7 +117,6 @@
 .collapsableMenuEntry:nth-child(even) .title {
     border-bottom: dashed 5px var(--blue-00);
 }
-
 
 /* #endregion */
 
@@ -157,7 +156,7 @@
 
 .titleSection {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: var(--menuHeader_padding);
 }
@@ -165,16 +164,15 @@
 .titleSection>section {
     min-width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .titleSection>section:last-child {
-    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .titleSection>section:first-child {
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .titleSection span {

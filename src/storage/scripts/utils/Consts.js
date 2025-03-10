@@ -24,6 +24,8 @@ export default class Consts {
             "social": "social",
             "linkedin": "linkedin",
             "history": "history",
+            "achivements": "achivements",
+            "resume": "resume",
             "about": "about",
             "mail": "mail",
             "settings": "settings",
@@ -33,9 +35,11 @@ export default class Consts {
         type: {
             "linkedin": "linkedin",
             "directory": "directory",
-            "projects": "directory",
             "social": "directory",
+            "projects": "projects",
             "history": "history",
+            "achivements": "achivements",
+            "resume": "resume",
             "about": "about",
             "mail": "mail",
             "settings": "settings",
@@ -47,10 +51,12 @@ export default class Consts {
             "projects": "Projects",
             "social": "Social",
             "history": "History",
+            "achivements": "Achievements",
+            "resume": "Resume file",
             "about": "About me",
             "mail": "Mail",
             "settings": "Settings",
-            "recycle bin": "Recycle Bin",
+            "recycle bin": "Recycle bin",
             "github": "Github"
         }
     };

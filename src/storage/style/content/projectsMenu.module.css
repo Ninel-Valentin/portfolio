@@ -1,0 +1,37 @@
+:root {
+    --githubLink_height: 4rem;
+}
+
+.githubLink,
+.githubLink svg {
+    width: auto;
+    height: var(--githubLink_height);
+}
+
+.githubLink.odd {
+    fill: var(--blue-00);
+}
+
+.githubLink.odd:hover {
+    fill: var(--blue-02) !important;
+}
+
+.titleSection:hover .githubLink.odd {
+    fill: var(--blue-03);
+}
+
+.githubLink.even {
+    fill: var(--blue-14);
+}
+
+.githubLink.even:hover {
+    fill: var(--blue-06) !important;
+}
+
+.titleSection:hover .githubLink.even {
+    fill: var(--blue-09);
+}
+
+.gridSection{
+    display: grid;
+}

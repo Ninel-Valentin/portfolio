@@ -8,6 +8,6 @@ export default class PlaceholderContent extends React.Component {
     }
 
     render() {
-        return <h1 className={workingStyles.title}>Something went wrong or I'm still working on this, sorry... <br /> Come back later! 😓</h1>
+        return <h1 className={workingStyles.title}> This page is not cooked completely 🍳 <br /> Come back some other time! 👨‍🍳</h1>
     }
 }

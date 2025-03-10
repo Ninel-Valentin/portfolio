@@ -1,4 +1,5 @@
-import styles from '../../../storage/style/content/collapsableMenu.module.css';
+import collapsableMenuStyles from '../../../storage/style/content/collapsableMenu.module.css';
+import projectsMenuStyles from '../../../storage/style/content/projectsMenu.module.css';
 import React from "react";
 
 export default class CollapsableMenuEntry extends React.Component {
@@ -14,7 +15,7 @@ export default class CollapsableMenuEntry extends React.Component {
     }
 
     render() {
-        let className = styles.collapsableMenuEntry;
+        let className = `${collapsableMenuStyles.collapsableMenuEntry} ${projectsMenuStyles.titleSection}`;
         return (
             <li
                 className={className}
@@ -41,8 +42,8 @@ export default class CollapsableMenuEntry extends React.Component {
                     }
                 }}
             >
-                <section className={styles.collapsableMenuHeader}>{this.header}</section>
-                <section className={styles.collapsableMenuContent}>{this.content}</section>
+                <section className={collapsableMenuStyles.collapsableMenuHeader}>{this.header}</section>
+                <section className={collapsableMenuStyles.collapsableMenuContent}>{this.content}</section>
             </li>
         );
     }

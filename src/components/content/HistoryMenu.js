@@ -54,18 +54,18 @@ export default class HistoryMenu extends React.Component {
                     <h2 className={collapsableMenuStyles.title}>{entry.title}</h2>
                     <span>{this.parseDate(entry)}</span>
                 </section>
-                <section>
+                <section className={historyMenuStyles.headerSection}>
                     <img className={historyMenuStyles.companyLogo} src={reactUtils.loadCompanyLogo(entry.logo)} />
                     <p className={historyMenuStyles.companyName}>{entry.company}</p>
                 </section>
             </div>
-            {reactUtils.loadSVGWave(false)}
+            {reactUtils.loadSVGWave(false, collapsableMenuStyles.wave)}
         </>;
     }
 
     createContent(entry) {
         return <>
-            {reactUtils.loadSVGWave(true)}
+            {reactUtils.loadSVGWave(true, collapsableMenuStyles.wave)}
             <div className={collapsableMenuStyles.contentBody}>
                 <h3>Responsabilities:</h3>
                 {entry.description.map((description, i) => {

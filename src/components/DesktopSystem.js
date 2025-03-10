@@ -39,11 +39,16 @@ export default class DesktopSystem extends React.Component {
     RenderDesktopIcons() {
         return (<>
             <DirectoryInstanceIcon appUtils={this.appUtils} name="social" />
-            <AppInstanceIcon appUtils={this.appUtils} name="projects" />
+            <AppInstanceIcon appUtils={this.appUtils} name="resume" />
+            <AppInstanceIcon appUtils={this.appUtils} name="achivements" />
             <AppInstanceIcon appUtils={this.appUtils} name="history" />
+            <AppInstanceIcon appUtils={this.appUtils} name="projects" />
             <AppInstanceIcon appUtils={this.appUtils} name="about" />
+
+            {/* 
             <AppInstanceIcon appUtils={this.appUtils} name="settings" />
-            <AppInstanceIcon appUtils={this.appUtils} name="recycle bin" />
+            <AppInstanceIcon appUtils={this.appUtils} name="recycle bin" /> 
+            */}
         </>);
     }
 
@@ -51,7 +56,7 @@ export default class DesktopSystem extends React.Component {
         const appData = this.appUtils.getAppData();
         return (<>{appData.instances.entries.map((appInstance, iteration) => {
             let position = this.getNextSpawnPosition(iteration);
-            
+
             switch (appInstance.type) {
                 case Consts.instanceType.App:
                     return <AppInstanceWindow

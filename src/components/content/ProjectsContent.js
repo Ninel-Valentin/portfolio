@@ -1,6 +1,7 @@
 import React from "react";
 
 import collapsableMenuStyles from '../../storage/style/content/collapsableMenu.module.css';
+import projectsMenuStyles from '../../storage/style/content/projectsMenu.module.css';
 
 import projectsData from '../../storage/data/projects.json';
 import CollapsableMenu from "./default/CollapsableMenu";
@@ -25,7 +26,7 @@ export default class ProjectsContent extends React.Component {
 
     generateEntries() {
         return this.data.entries.map((entry, i) => {
-            let [header, content] = this.generateMenu(entry);
+            let [header, content] = this.generateMenu(entry, i);
             return <CollapsableMenuEntry
                 windowIdentifier={'projects'}
                 appUtils={this.appUtils}
@@ -39,14 +40,15 @@ export default class ProjectsContent extends React.Component {
         });
     }
 
-    generateMenu(entry) {
-        let header = this.createHeader(entry);
+    generateMenu(entry, i) {
+        let header = this.createHeader(entry, i);
         let content = this.createContent(entry);
 
         return [header, content];
     }
 
-    createHeader(entry) {
+    createHeader(entry, i) {
+        const isOdd = i % 2;
         return <>
             <div className={collapsableMenuStyles.titleSection}>
                 <section>
@@ -54,27 +56,61 @@ export default class ProjectsContent extends React.Component {
                     <span> {this.parseDate(entry)} </span>
                     <p> {entry.shortDescription} </p>
                 </section>
+                <section>
+                    {entry.Link && this.loadGithubLink(entry, isOdd)}
+                    <a
+                        className={`${projectsMenuStyles.githubLink} ${collapsableMenuStyles.nonWave} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
+                        href={entry.Repository} target="_blank">
+                        {reactUtils.loadProjectGitHubLink(entry)}
+                    </a>
+                </section>
             </div>
-            {reactUtils.loadSVGWave(false)}
+            {reactUtils.loadSVGWave(false, collapsableMenuStyles.wave)}
         </>;
+    }
+
+    loadGithubLink(entry, isOdd) {
+        return <a
+            className={`${projectsMenuStyles.githubLink} ${collapsableMenuStyles.nonWave} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
+            href={entry.Link} target="_blank">
+            {reactUtils.loadWebIcon()}
+        </a>;
     }
 
     createContent(entry) {
         return <>
-            {reactUtils.loadSVGWave(true)}
+            {reactUtils.loadSVGWave(true, collapsableMenuStyles.wave)}
             <div className={collapsableMenuStyles.contentBody}>
                 <h3>Description:</h3>
                 {entry.description.map((description, i) => {
-                    return <p key={`description_${i}`}>◐&nbsp;{description}</p>;
+                    if (typeof (description) == typeof ({}))
+                        return <div key={`description_${i}`}>
+                            <p key={`description_title_${i}`}>
+                                ◐&nbsp;{description.title}
+                            </p>
+                            <ol key={`description_list_${i}`}>
+                                {description.content.map((contentItem, j) =>
+                                    <li key={`description_${i}_contentItem_${j}`}>{contentItem}</li>
+                                )}
+                            </ol>
+                        </div>;
+                    else
+                        return <p key={`description_${i}`}>◐&nbsp;{description}</p>;
                 })}
                 <div className={collapsableMenuStyles.splitContent}>
                     <div>
                         <h3>Technologies:</h3>
-                        {entry.technologies.map((technology, i) => {
-                            return <p key={`technologies_${i}`}>↪&nbsp;<span
-                                key={`span_technologies_${i}`}
-                                className={collapsableMenuStyles.highlightedSpan}>{technology}</span>&nbsp;↩</p>
-                        })}
+                        <section
+                            className={projectsMenuStyles.gridSection}
+                            style={{
+                                gridTemplateColumns: `repeat(${Math.ceil(entry.technologies.length / 3)}, minmax(100px, 1fr))`
+                            }}>
+                            {entry.technologies.map((technology, i) => {
+                                return <p key={`technologies_${i}`}>↪&nbsp;<span
+                                    key={`span_technologies_${i}`}
+                                    className={collapsableMenuStyles.highlightedSpan}>{technology}</span>&nbsp;↩</p>
+                            })}
+                        </section>
                     </div>
                 </div>
             </div>

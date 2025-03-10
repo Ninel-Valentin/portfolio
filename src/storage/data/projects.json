@@ -2,11 +2,11 @@
     "entries": [
         {
             "id": 9,
-            "title": "Portfolio v2",
+            "title": "Desktop portfolio",
             "createdDate": "Dec. 2024",
-            "shortDescription": "Website portfolio",
+            "shortDescription": "Portfolio website which emulates a desktop",
             "description": [
-                "Personal portfolio website which emulates a desktop"
+                "Website application which emulates a minimal desktop environment"
             ],
             "technologies": [
                 "JavaScript",
@@ -75,9 +75,15 @@
             "createdDate": "Dec. 2023",
             "shortDescription": "Pathfinder desktop application using graph search algorithms",
             "description": [
-                "1. Draw a graph on a canvas or on a grid",
-                "2. Pick a starting and ending point",
-                "3. See a representation of the shortest path/least stops/least weight/etc."
+                {
+                    "title": "How to use:",
+                    "content": [
+                        "Draw a graph on a canvas or on a grid",
+                        "Pick a starting and ending point",
+                        "See a representation of the shortest path/least stops/least weight/etc."
+                    ]
+                },
+                "Load/Save application templates"
             ],
             "technologies": [
                 "Java"
@@ -114,9 +120,14 @@
             "createdDate": "May 2023",
             "shortDescription": "A console application used to manage graph searches",
             "description": [
-                "1. Add/Remove nodes/edges",
-                "2. Pick a starting and ending point",
-                "3. Get the shortest path between them",
+                {
+                    "title": "How to use:",
+                    "content": [
+                        "Add/Remove nodes/edges",
+                        "Pick a starting and ending point",
+                        "Get the shortest path between them"
+                    ]
+                },
                 "Load/Save templates",
                 "Toggle settings on/off"
             ],
@@ -133,7 +144,9 @@
             "createdDate": "Feb. 2023",
             "shortDescription": "A visual representation of the Wave Function Collapse algorithm",
             "description": [
-                "Procedurally generating 2D tile maps"
+                "Procedurally generating 2D tile maps",
+                "Unlimited input of tiles that helps generating a predefined map",
+                "Customizable output size"
             ],
             "technologies": [
                 "JavaScript"
@@ -148,8 +161,8 @@
             "createdDate": "Mar. 2022",
             "shortDescription": "Website portfolio",
             "description": [
-                "First portfolio project",
-                "First React project"
+                "Portfolio created as first React knowledge testing project",
+                "Scrolling animation simulated and replaced by React rendering new pages"
             ],
             "technologies": [
                 "JavaScript",

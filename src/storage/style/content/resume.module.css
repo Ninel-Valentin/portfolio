@@ -1,0 +1,49 @@
+:root {
+    --resumeSection_height: 2rem;
+    --resumeSection_margin: 1rem;
+}
+
+.resumeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumeSection:first-child {
+    height: var(--resumeSection_height);
+    width: calc(100% - 2 * var(--resumeSection_margin));
+    margin: var(--resumeSection_margin);
+}
+
+.resumeSection:last-child {
+    height: calc(100% - var(--resumeSection_height) - 2 * var(--resumeSection_margin) - 2px);
+}
+
+.resumeLink {
+    display: block;
+    width: 10rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    outline: 1px solid var(--white-03);
+    background-color: var(--white-03);
+    color: var(--blue-12);
+    transition: color .2s, background-color .2s, outline .2s;
+}
+
+.resumeLink:hover {
+    outline: 1px solid var(--blue-00);
+    background-color: var(--blue-00);
+    color: var(--blue-12);
+
+}
+
+.resumeLink:active {
+    outline: 1px solid var(--white-00);
+    background-color: var(--blue-15);
+    color: var(--white-00);
+}

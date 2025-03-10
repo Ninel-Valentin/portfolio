@@ -6,10 +6,14 @@ import { ReactComponent as MailIcon } from '../../svg/mail.svg';
 import { ReactComponent as LinkedInIcon } from '../../svg/linkedin.svg';
 import { ReactComponent as SettingsIcon } from '../../svg/settings.svg';
 import { ReactComponent as RecycleBinIcon } from '../../svg/trash.svg';
+import { ReactComponent as ProjectsIcon } from '../../svg/projects.svg';
 import { ReactComponent as HistoryIcon } from '../../svg/history.svg';
+import { ReactComponent as AchivementsIcon } from '../../svg/achivements.svg';
+import { ReactComponent as ResumeIcon } from '../../svg/resume.svg';
 import { ReactComponent as InfoIcon } from '../../svg/info.svg';
 import { ReactComponent as Directory } from '../../svg/directory.svg';
 import { ReactComponent as GithubIcon } from '../../svg/github.svg';
+import { ReactComponent as WebIcon } from '../../svg/web.svg';
 
 import { ReactComponent as Wave01 } from '../../svg/wave/wave01.svg';
 import { ReactComponent as Wave02 } from '../../svg/wave/wave02.svg';
@@ -35,6 +39,7 @@ import HistoryMenu from '../../../components/content/HistoryMenu.js';
 import AppInstanceIcon from '../../../components/icons/AppInstanceIcon.js';
 import ProjectsContent from '../../../components/content/ProjectsContent.js';
 import AboutMe from '../../../components/content/AboutMe.js';
+import Resume from '../../../components/content/Resume.js';
 
 export default class reactUtils {
 
@@ -42,8 +47,14 @@ export default class reactUtils {
         switch (Consts.applications.type[name]) {
             case Consts.applications.type["linkedin"]:
                 return <LinkedInIcon />
+            case Consts.applications.type["projects"]:
+                return <ProjectsIcon />
             case Consts.applications.type["history"]:
                 return <HistoryIcon />
+            case Consts.applications.type["achivements"]:
+                return <AchivementsIcon />
+            case Consts.applications.type["resume"]:
+                return <ResumeIcon />
             case Consts.applications.type["about"]:
                 return <InfoIcon />
             case Consts.applications.type["mail"]:
@@ -94,6 +105,10 @@ export default class reactUtils {
             case Consts.applications.name["about"]:
                 return <AboutMe
                     appUtils={appUtils} />;
+            case Consts.applications.name["resume"]:
+                return <Resume
+                // appUtils={appUtils} 
+                />;
             default:
                 return <PlaceholderContent />;
         }
@@ -112,7 +127,11 @@ export default class reactUtils {
         return ProfileImage;
     }
 
-    static loadSVGWave(flipped) {
+    static loadWebIcon() {
+        return <WebIcon />;
+    }
+
+    static loadSVGWave(flipped, waveClass) {
         const waves = [
             <Wave01 />,
             <Wave02 />,
@@ -126,14 +145,20 @@ export default class reactUtils {
             <Wave10 />
         ];
         let randomIndex = Math.floor(Math.random() * waves.length);
-        let attributes = {};
+        let attributes = {
+            className: waveClass
+        };
 
         if (flipped)
-            attributes.className = 'flipped';
+            attributes.className += ' flipped';
 
 
         return <div {...attributes}>
             {waves[randomIndex]}
         </div>;
+    }
+
+    static loadProjectGitHubLink(entry) {
+        return <GithubIcon />;
     }
 }
