@@ -13,6 +13,7 @@ import { ReactComponent as ResumeIcon } from '../../svg/resume.svg';
 import { ReactComponent as InfoIcon } from '../../svg/info.svg';
 import { ReactComponent as Directory } from '../../svg/directory.svg';
 import { ReactComponent as GithubIcon } from '../../svg/github.svg';
+import { ReactComponent as GithubOriginalIcon } from '../../svg/github_original.svg';
 import { ReactComponent as WebIcon } from '../../svg/web.svg';
 
 import { ReactComponent as Wave01 } from '../../svg/wave/wave01.svg';
@@ -64,7 +65,7 @@ export default class reactUtils {
             case Consts.applications.type["recycle bin"]:
                 return <RecycleBinIcon />
             case Consts.applications.type["github"]:
-                return <GithubIcon />
+                return <GithubOriginalIcon />
             case Consts.applications.type["directory"]:
                 return <Directory />
             default:
