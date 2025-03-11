@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fefdc39e.css",
-    "main.js": "/static/js/main.ea9f83f6.js",
+    "main.js": "/static/js/main.dca14e56.js",
     "static/media/resume.pdf": "/static/media/resume.9b18bb71c04b5e95721a.pdf",
     "static/media/profile.jpeg": "/static/media/profile.8cc738ddd958a0a8d973.jpeg",
     "static/media/channelsight.png": "/static/media/channelsight.a8dd07af0e4429636aed.png",
@@ -9,7 +9,8 @@
     "static/media/settings.svg": "/static/media/settings.0679d620a2a2cc76d491c3ed4050d027.svg",
     "static/media/achivements.svg": "/static/media/achivements.07e7f0c33b930045ccea6f5bbe4d4a6a.svg",
     "static/media/info.svg": "/static/media/info.09c06069e85fdc9f8d921de0a12cb461.svg",
-    "static/media/github.svg": "/static/media/github.acd81090a569121819b9d2cb4e45480d.svg",
+    "static/media/github_original.svg": "/static/media/github_original.d356109cf8fb542ea19ee6aec0af6a91.svg",
+    "static/media/github.svg": "/static/media/github.20dd56cfb1048b218a37e17b518cd645.svg",
     "static/media/trash.svg": "/static/media/trash.3f83f515035939810844accda6218843.svg",
     "static/media/history.svg": "/static/media/history.5f1507d916d6e63bfd83698fa1ae19d4.svg",
     "index.html": "/index.html",
@@ -31,10 +32,10 @@
     "static/media/wave09.svg": "/static/media/wave09.f139d75ac6986dd5f7bd5b014ab6c82e.svg",
     "static/media/os.svg": "/static/media/os.1689f993c42f12c917e4cf0531312b46.svg",
     "main.fefdc39e.css.map": "/static/css/main.fefdc39e.css.map",
-    "main.ea9f83f6.js.map": "/static/js/main.ea9f83f6.js.map"
+    "main.dca14e56.js.map": "/static/js/main.dca14e56.js.map"
   },
   "entrypoints": [
     "static/css/main.fefdc39e.css",
-    "static/js/main.ea9f83f6.js"
+    "static/js/main.dca14e56.js"
   ]
 }
