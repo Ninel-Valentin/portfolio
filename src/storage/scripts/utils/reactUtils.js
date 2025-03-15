@@ -2,6 +2,7 @@ import React from 'react';
 
 import Consts from './Consts';
 
+//#region Icons
 import { ReactComponent as MailIcon } from '../../svg/mail.svg';
 import { ReactComponent as LinkedInIcon } from '../../svg/linkedin.svg';
 import { ReactComponent as SettingsIcon } from '../../svg/settings.svg';
@@ -12,10 +13,13 @@ import { ReactComponent as AchivementsIcon } from '../../svg/achivements.svg';
 import { ReactComponent as ResumeIcon } from '../../svg/resume.svg';
 import { ReactComponent as InfoIcon } from '../../svg/info.svg';
 import { ReactComponent as Directory } from '../../svg/directory.svg';
+import { ReactComponent as WebIcon } from '../../svg/web.svg';
 import { ReactComponent as GithubIcon } from '../../svg/github.svg';
 import { ReactComponent as GithubOriginalIcon } from '../../svg/github_original.svg';
-import { ReactComponent as WebIcon } from '../../svg/web.svg';
+import { ReactComponent as DocumentIcon } from '../../svg/document.svg';
+//#endregion Icons
 
+//#region Waves
 import { ReactComponent as Wave01 } from '../../svg/wave/wave01.svg';
 import { ReactComponent as Wave02 } from '../../svg/wave/wave02.svg';
 import { ReactComponent as Wave03 } from '../../svg/wave/wave03.svg';
@@ -26,14 +30,16 @@ import { ReactComponent as Wave07 } from '../../svg/wave/wave07.svg';
 import { ReactComponent as Wave08 } from '../../svg/wave/wave08.svg';
 import { ReactComponent as Wave09 } from '../../svg/wave/wave09.svg';
 import { ReactComponent as Wave10 } from '../../svg/wave/wave10.svg';
+//#endregion Waves
 
+//#region Logos
 import SiemensLogo from '../../img/logo/siemens.png';
 import CSLogo from '../../img/logo/channelsight.png';
 import MCLogo from '../../img/logo/mcdonalds.png';
 import ProfiLogo from '../../img/logo/profi.png';
+//#endregion Logos
 
-import ProfileImage from '../../img/profile/profile.jpeg';
-
+//#region Components
 import PlaceholderContent from '../../../components/content/temp/PlaceholderContent.js';
 
 import HistoryMenu from '../../../components/content/HistoryMenu.js';
@@ -41,6 +47,13 @@ import AppInstanceIcon from '../../../components/icons/AppInstanceIcon.js';
 import ProjectsContent from '../../../components/content/ProjectsContent.js';
 import AboutMe from '../../../components/content/AboutMe.js';
 import Resume from '../../../components/content/Resume.js';
+//#endregion Components
+
+//#region Documents
+import resumeFile from '../../documents/resume.pdf';
+//#endregion Documents
+
+import ProfileImage from '../../img/profile/profile.jpeg';
 
 export default class reactUtils {
 
@@ -60,14 +73,17 @@ export default class reactUtils {
                 return <InfoIcon />
             case Consts.applications.type["mail"]:
                 return <MailIcon />
-            case Consts.applications.type["settings"]:
-                return <SettingsIcon />
-            case Consts.applications.type["recycle bin"]:
-                return <RecycleBinIcon />
+            // case Consts.applications.type["settings"]:
+            //     return <SettingsIcon />
+            // case Consts.applications.type["recycle bin"]:
+            //     return <RecycleBinIcon />
             case Consts.applications.type["github"]:
                 return <GithubOriginalIcon />
             case Consts.applications.type["directory"]:
                 return <Directory />
+
+            case Consts.applications.type["localDocument"]:
+                return <DocumentIcon />
             default:
                 return;
         }
@@ -94,7 +110,12 @@ export default class reactUtils {
         }
     }
 
-    static loadApplicationContent(name, appUtils) {
+    static loadApplicationContent(name, appUtils, src = null) {
+        if (src == Consts.applications.type["localDocument"])
+            return <Resume
+                name={name}
+            />;
+
         switch (Consts.applications.name[name]) {
             case Consts.applications.name["history"]:
                 return <HistoryMenu
@@ -108,7 +129,8 @@ export default class reactUtils {
                     appUtils={appUtils} />;
             case Consts.applications.name["resume"]:
                 return <Resume
-                // appUtils={appUtils} 
+                    name={name}
+                    downloadName={Consts.applications.documentName["resume"]}
                 />;
             default:
                 return <PlaceholderContent />;
@@ -159,7 +181,18 @@ export default class reactUtils {
         </div>;
     }
 
-    static loadProjectGitHubLink(entry) {
+    static loadProjectGitHubLink() {
         return <GithubIcon />;
+    }
+
+    static loadProjectGithubDoc() {
+        return <DocumentIcon />;
+    }
+
+    static loadDocumentFile(name) {
+        switch (Consts.applications.document[name]) {
+            case Consts.applications.document["resume"]:
+                return resumeFile;
+        }
     }
 }

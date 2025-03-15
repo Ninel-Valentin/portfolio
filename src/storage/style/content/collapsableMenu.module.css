@@ -198,6 +198,10 @@
 .contentBody .splitContent {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
+}
+
+.contentBody .splitContent p{
+    text-align: center;
 }

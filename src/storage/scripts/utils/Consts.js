@@ -44,7 +44,8 @@ export default class Consts {
             "mail": "mail",
             "settings": "settings",
             "recycle bin": "recycle bin",
-            "github": "github"
+            "github": "github",
+            "localDocument": "localDocument"
         },
         title: {
             "linkedin": "LinkedIn",
@@ -58,6 +59,12 @@ export default class Consts {
             "settings": "Settings",
             "recycle bin": "Recycle bin",
             "github": "Github"
+        },
+        document: {
+            "resume": "resume.pdf",
+        },
+        documentName: {
+            "resume": "Ninel-Valentin Bănică CV",
         }
     };
 };

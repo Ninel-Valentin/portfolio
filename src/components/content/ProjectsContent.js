@@ -8,6 +8,8 @@ import CollapsableMenu from "./default/CollapsableMenu";
 import CollapsableMenuEntry from "./default/CollapsableMenuEntry";
 
 import reactUtils from "../../storage/scripts/utils/reactUtils.js";
+import AppInstanceIcon from "../icons/AppInstanceIcon.js";
+import Consts from "../../storage/scripts/utils/Consts.js";
 
 export default class ProjectsContent extends React.Component {
     constructor(props) {
@@ -57,23 +59,36 @@ export default class ProjectsContent extends React.Component {
                     <p> {entry.shortDescription} </p>
                 </section>
                 <section>
+                    {entry.Documentation && this.loadGithubDoc(entry, isOdd)}
                     {entry.Link && this.loadGithubLink(entry, isOdd)}
-                    <a
-                        className={`${projectsMenuStyles.githubLink} ${collapsableMenuStyles.nonWave} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
-                        href={entry.Repository} target="_blank">
-                        {reactUtils.loadProjectGitHubLink(entry)}
-                    </a>
+                    {entry.Repository && this.loadGithubRepo(entry, isOdd)}
                 </section>
             </div>
             {reactUtils.loadSVGWave(false, collapsableMenuStyles.wave)}
         </>;
     }
 
+    loadGithubDoc(entry, isOdd) {
+        return <AppInstanceIcon
+            className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
+            appUtils={this.appUtils}
+            name={entry.Documentation}
+            src={Consts.applications.type["localDocument"]} />
+    }
+
     loadGithubLink(entry, isOdd) {
         return <a
-            className={`${projectsMenuStyles.githubLink} ${collapsableMenuStyles.nonWave} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
+            className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
             href={entry.Link} target="_blank">
             {reactUtils.loadWebIcon()}
+        </a>;
+    }
+
+    loadGithubRepo(entry, isOdd) {
+        return <a
+            className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
+            href={entry.Repository} target="_blank">
+            {reactUtils.loadProjectGitHubLink()}
         </a>;
     }
 

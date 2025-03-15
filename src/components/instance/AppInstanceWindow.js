@@ -8,6 +8,7 @@ export default class AppInstanceWindow extends DefaultInstanceWindow {
 
         this.appUtils = props.appUtils;
         this.name = props.name;
+        this.src = props.src;
         this.loadContent = this.loadContent.bind(this);
     }
 
@@ -19,7 +20,7 @@ export default class AppInstanceWindow extends DefaultInstanceWindow {
     }
 
     loadContent = () => {
-        return reactUtils.loadApplicationContent(this.name, this.appUtils);
+        return reactUtils.loadApplicationContent(this.name, this.appUtils, this.src);
     }
 }
 

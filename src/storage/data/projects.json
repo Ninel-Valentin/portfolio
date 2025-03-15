@@ -14,6 +14,7 @@
                 "NodeJS"
             ],
             "Repository": "https://github.com/Ninel-Valentin/portfolio_v2",
+            "Documentation": "resume",
             "Link": "https://ninel-valentin.com/",
             "MediaPath": null
         },
@@ -36,6 +37,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/CityInfo",
             "Link": null,
+            "Documentation": null,
             "MediaPath": null
         },
         {
@@ -54,6 +56,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/Microservices",
             "Link": null,
+            "Documentation": null,
             "MediaPath": null
         },
         {
@@ -61,12 +64,16 @@
             "title": "Falling sand simulation",
             "createdDate": "Feb. 2024",
             "shortDescription": "Interactive sand simulation on a JavaScript canvas",
-            "description": [],
+            "description": [
+                "Interactive sand simulation on a JavaScript canvas",
+                "Customizable sand properties"
+            ],
             "technologies": [
                 "JavaScript"
             ],
             "Repository": "https://github.com/Ninel-Valentin/FallingSandSimulation",
             "Link": "https://ninel-valentin.github.io/FallingSandSimulation/",
+            "Documentation": null,
             "MediaPath": null
         },
         {
@@ -90,6 +97,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/PathFinder",
             "Link": null,
+            "Documentation": null,
             "MediaPath": "pathfinderJava"
         },
         {
@@ -112,6 +120,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/WebRetailProject",
             "Link": null,
+            "Documentation": null,
             "MediaPath": "webretail"
         },
         {
@@ -136,6 +145,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/GraphSearch",
             "Link": null,
+            "Documentation": null,
             "MediaPath": "pathfinderCpp"
         },
         {
@@ -153,6 +163,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/WaveFunctionCollapse",
             "Link": "https://ninel-valentin.github.io/WaveFunctionCollapse/",
+            "Documentation": null,
             "MediaPath": null
         },
         {
@@ -171,6 +182,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/portfolio_v1",
             "Link": "https://ninel-valentin.github.io/portfolio_v1/public/index",
+            "Documentation": null,
             "MediaPath": null
         },
         {
@@ -193,6 +205,7 @@
             ],
             "Repository": "https://github.com/Ninel-Valentin/MessageSender",
             "Link": null,
+            "Documentation": null,
             "MediaPath": null
         }
     ]

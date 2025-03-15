@@ -77,10 +77,15 @@ export default class DefaultInstanceWindow extends React.Component {
                     <p>
                         <span className={styles.appMenuBarIcon}>
                             {reactUtils.loadDisplayIcon(
-                                Consts.applications.type[this.name]
+                                this.src == Consts.applications.type["localDocument"] ?
+                                    Consts.applications.type["localDocument"] :
+                                    Consts.applications.type[this.name]
                             )}
                         </span>
-                        {Consts.applications.title[this.name]}
+                        {
+                        this.src == Consts.applications.type["localDocument"] ?
+                        this.name :
+                        Consts.applications.title[this.name]}
                     </p>
                     <div>
                         {this.RenderMenuBarButtons && this.RenderMenuBarButtons()}

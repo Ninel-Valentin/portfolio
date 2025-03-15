@@ -21,14 +21,15 @@ export default class appUtils {
         return this.getActiveInstanceId() == idToCheck;
     }
 
-    createWindowInstance(name, appName, src = null) {
+    createWindowInstance(name, appName, src = null, localDocument = null) {
         let id = this.getNextInstanceId();
 
         this.addInstance({
             type: appName.includes('App') ? Consts.instanceType.App : Consts.instanceType.Directory,
             id,
             name,
-            src
+            src,
+            localDocument
         });
         return id;
     }
@@ -36,7 +37,7 @@ export default class appUtils {
     /**
      * Checks for the instanceName, if it exists, it will be focused, else create it
      */
-    enableWindowInstance(instanceName, appName, src = null) {
+    enableWindowInstance(instanceName, appName, src = null, localDocument = null) {
         if (!instanceName) return;
 
         const appData = this.getAppData();
@@ -54,7 +55,7 @@ export default class appUtils {
         }
         else
             // Open app window / directory
-            instanceId = this.createWindowInstance(instanceName, appName, src)
+            instanceId = this.createWindowInstance(instanceName, appName, src, localDocument)
 
         this.setActiveInstanceId(instanceId);
         this.forceUpdateApp();
