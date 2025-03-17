@@ -1,7 +1,8 @@
 :root {
     --menuHeader_height: 2rem;
     --menuHeader_padding_vertical: .25rem;
-    --menuHeader_padding: var(--menuHeader_padding_vertical) 5rem;
+    --menuHeader_padding_horizontal: 4rem;
+    --menuHeader_padding: var(--menuHeader_padding_vertical) var(--menuHeader_padding_horizontal);
 }
 
 .collapsableMenu {
@@ -65,6 +66,10 @@
     border-bottom: dashed 5px var(--blue-15);
 }
 
+.collapsableMenuEntry:nth-child(odd) .link {
+    color: var(--blue-15);
+}
+
 
 .collapsableMenuEntry:nth-child(even) {
     background-color: var(--blue-15);
@@ -116,6 +121,10 @@
 
 .collapsableMenuEntry:nth-child(even) .title {
     border-bottom: dashed 5px var(--blue-00);
+}
+
+.collapsableMenuEntry:nth-child(even) .link {
+    color: var(--blue-00);
 }
 
 /* #endregion */
@@ -180,13 +189,15 @@
     font-weight: bold;
 }
 
-.title {
+.title,
+.subtitle {
     width: fit-content;
     font-weight: 700;
     margin: 0;
 }
 
-.collapsableMenuHeader:hover .title {
+.collapsableMenuHeader:hover .title,
+.collapsableMenuHeader:hover .subtitle {
     color: var(--light-gray-0);
 }
 
@@ -202,6 +213,11 @@
     align-items: flex-start;
 }
 
-.contentBody .splitContent p{
+.contentBody .splitContent p {
     text-align: center;
+}
+
+.link {
+    margin: 0 0 2rem;
+    display: inline-block;
 }

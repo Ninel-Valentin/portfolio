@@ -37,14 +37,15 @@ import SiemensLogo from '../../img/logo/siemens.png';
 import CSLogo from '../../img/logo/channelsight.png';
 import MCLogo from '../../img/logo/mcdonalds.png';
 import ProfiLogo from '../../img/logo/profi.png';
+import AWSLogo from '../../img/logo/aws.png';
 //#endregion Logos
 
 //#region Components
 import PlaceholderContent from '../../../components/content/temp/PlaceholderContent.js';
 
-import HistoryMenu from '../../../components/content/HistoryMenu.js';
+import History from '../../../components/content/History.js';
 import AppInstanceIcon from '../../../components/icons/AppInstanceIcon.js';
-import ProjectsContent from '../../../components/content/ProjectsContent.js';
+import Projects from '../../../components/content/Projects.js';
 import AboutMe from '../../../components/content/AboutMe.js';
 import Resume from '../../../components/content/Resume.js';
 //#endregion Components
@@ -54,6 +55,7 @@ import resumeFile from '../../documents/resume.pdf';
 //#endregion Documents
 
 import ProfileImage from '../../img/profile/profile.jpeg';
+import Achivements from '../../../components/content/Achivements.js';
 
 export default class reactUtils {
 
@@ -103,7 +105,8 @@ export default class reactUtils {
                         href="https://github.com/Ninel-Valentin" />
                     <AppInstanceIcon
                         appUtils={appUtils}
-                        name="mail" />
+                        name="mail" 
+                        href="mailto:valentinbanica8@gmail.com" />
                 </>);
             default:
                 return;
@@ -118,11 +121,11 @@ export default class reactUtils {
 
         switch (Consts.applications.name[name]) {
             case Consts.applications.name["history"]:
-                return <HistoryMenu
+                return <History
                     key={`historyMenu_${name}`}
                     appUtils={appUtils} />;
             case Consts.applications.name["projects"]:
-                return <ProjectsContent
+                return <Projects
                     appUtils={appUtils} />;
             case Consts.applications.name["about"]:
                 return <AboutMe
@@ -132,6 +135,9 @@ export default class reactUtils {
                     name={name}
                     downloadName={Consts.applications.documentName["resume"]}
                 />;
+            case Consts.applications.name["achivements"]:
+                return <Achivements
+                    appUtils={appUtils} />;
             default:
                 return <PlaceholderContent />;
         }
@@ -143,6 +149,8 @@ export default class reactUtils {
                 return SiemensLogo;
             case 'channelsight':
                 return CSLogo;
+            case 'aws':
+                return AWSLogo;
         }
     }
 

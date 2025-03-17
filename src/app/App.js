@@ -34,6 +34,9 @@ export default class App extends React.Component {
                 },
                 project: {
                     activeId: null
+                },
+                achivements: {
+                    activeId: null
                 }
             }
         };

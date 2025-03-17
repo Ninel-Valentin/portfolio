@@ -10,11 +10,9 @@ export default class appUtils {
         this.setActiveInstanceId = this.setActiveInstanceId.bind(this);
         this.getActiveInstanceId = this.getActiveInstanceId.bind(this);
 
-        this.getActiveHistoryId = this.getActiveHistoryId.bind(this);
-        this.setActiveHistoryId = this.setActiveHistoryId.bind(this);
-        this.getActiveProjectId = this.getActiveProjectId.bind(this);
-        this.setActiveProjectId = this.setActiveProjectId.bind(this);
-        
+        this.getActiveSectionId = this.getActiveSectionId.bind(this);
+        this.setActiveSectionId = this.setActiveSectionId.bind(this);
+
     }
 
     isIdActive(idToCheck) {
@@ -269,38 +267,26 @@ export default class appUtils {
         this.forceUpdateApp();
     }
 
-    getActiveHistoryId() {
-        return this.getAppData().content.history.activeId;
+    getSectionData(sectionName) {
+        switch (sectionName) {
+            case 'history':
+                return this.getAppData().content.history;
+            case 'projects':
+                return this.getAppData().content.project;
+            case 'achivements':
+                return this.getAppData().content.achivements;
+        };
     }
 
-    setActiveHistoryId(instanceId) {
+    getActiveSectionId(sectionName) {
+        const section = this.getSectionData(sectionName);
+        return section.activeId;
+    }
+
+    setActiveSectionId(sectionName, instanceId) {
         const appData = this.getAppData();
-        this.setAppData({
-            ...appData,
-            content: {
-                ...appData.content,
-                history: {
-                    activeId: instanceId
-                }
-            }
-        });
-    }
+        appData.content[sectionName].activeId = instanceId;
 
-    getActiveProjectId() {
-        return this.getAppData().content.project.activeId;
+        this.setAppData(appData);
     }
-
-    setActiveProjectId(instanceId) {
-        const appData = this.getAppData();
-        this.setAppData({
-            ...appData,
-            content: {
-                ...appData.content,
-                project: {
-                    activeId: instanceId
-                }
-            }
-        });
-    }
-
 }

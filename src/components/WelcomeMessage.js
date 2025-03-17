@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from '../storage/style/welcomeMessage.module.css';
+import welcomeStyles from '../storage/style/welcomeMessage.module.css';
 
 import ApplyTypingAnimation from '../storage/scripts/screen/helloMsgAnimation.js';
 import { setCookie } from '../storage/scripts/CookieManager.js';
@@ -22,16 +22,16 @@ export default class WelcomeMessage extends React.Component {
         return (<>
             <p
                 data-select="welcomeMsg"
-                className={styles.welcomeP}
-                id={styles.welcomeMsg}>
+                className={welcomeStyles.welcomeP}
+                id={welcomeStyles.welcomeMsg}>
                 &gt;&gt;
                 <span data-select="targetMsg"></span>
-                <span id={styles.underscore}>_</span>
+                <span id={welcomeStyles.underscore}>_</span>
             </p>
             <p
                 data-select="continueMsg"
-                className={styles.welcomeP}
-                id={styles.continueMsg}>
+                className={welcomeStyles.welcomeP}
+                id={welcomeStyles.continueMsg}>
                 Press any button to continue...
             </p>
         </>);

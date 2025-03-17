@@ -10,8 +10,7 @@ export default class CollapsableMenuEntry extends React.Component {
         this.id = props.id;
         this.windowIdentifier = props.windowIdentifier;
         this.appUtils = props.appUtils;
-        this.getActiveSectionFunction = props.getActiveSectionFunction;
-        this.setActiveSectionFunction = props.setActiveSectionFunction;
+        this.sectionName = props.sectionName;
     }
 
     render() {
@@ -22,7 +21,7 @@ export default class CollapsableMenuEntry extends React.Component {
                 data-select={`collapsableMenu_${this.windowIdentifier}_${this.id}`}
                 key={`collapsableMenu_${this.windowIdentifier}_${this.id}`}
                 onClick={(e) => {
-                    let activeId = this.getActiveSectionFunction();
+                    let activeId = this.appUtils.getActiveSectionId(this.sectionName);
                     let activeItem = document.querySelector(`.active[data-select="collapsableMenu_${this.windowIdentifier}_${activeId}"]`);
 
                     // Remove the current active item
@@ -31,7 +30,7 @@ export default class CollapsableMenuEntry extends React.Component {
 
                     // Toggle the active for the clicked item
                     if (activeId != this.id || !activeItem) {
-                        this.setActiveSectionFunction(this.id);
+                        this.appUtils.setActiveSectionId(this.sectionName, this.id);
 
                         let currentItem = document.querySelector(`[data-select="collapsableMenu_${this.windowIdentifier}_${this.id}"]`);
                         if (currentItem)

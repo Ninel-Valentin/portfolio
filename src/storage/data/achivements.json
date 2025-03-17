@@ -1,0 +1,14 @@
+{
+    "entries":[
+        {
+            "id": 0,
+            "type": "Certification",
+            "title": "AWS Cloud Practitioner",
+            "date":"Nov. 2024",
+            "logo" : "aws",
+            "company":"Amazon Web Services",
+            "certifier":"Creadly by Pearson",
+            "link" : "https://www.credly.com/badges/ab9d2a96-3cf3-41f1-bbde-d0bc6b64abd3/linked_in"
+        }
+    ]
+}

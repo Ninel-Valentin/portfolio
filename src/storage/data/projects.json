@@ -13,10 +13,9 @@
                 "ReactJS",
                 "NodeJS"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/portfolio_v2",
-            "Documentation": "resume",
-            "Link": "https://ninel-valentin.com/",
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/portfolio_v2",
+            "documentation": null,
+            "link": "https://ninel-valentin.com/"
         },
         {
             "id": 8,
@@ -35,10 +34,9 @@
                 "HTML",
                 "CSS"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/CityInfo",
-            "Link": null,
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/CityInfo",
+            "link": null,
+            "documentation": null
         },
         {
             "id": 7,
@@ -54,10 +52,9 @@
                 "Flask",
                 "AWS"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/Microservices",
-            "Link": null,
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/Microservices",
+            "link": null,
+            "documentation": null
         },
         {
             "id": 6,
@@ -71,10 +68,9 @@
             "technologies": [
                 "JavaScript"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/FallingSandSimulation",
-            "Link": "https://ninel-valentin.github.io/FallingSandSimulation/",
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/FallingSandSimulation",
+            "link": "https://ninel-valentin.github.io/FallingSandSimulation/",
+            "documentation": null
         },
         {
             "id": 5,
@@ -95,9 +91,9 @@
             "technologies": [
                 "Java"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/PathFinder",
-            "Link": null,
-            "Documentation": null,
+            "repository": "https://github.com/Ninel-Valentin/PathFinder",
+            "link": null,
+            "documentation": null,
             "MediaPath": "pathfinderJava"
         },
         {
@@ -118,9 +114,9 @@
                 "SQL",
                 "Azure"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/WebRetailProject",
-            "Link": null,
-            "Documentation": null,
+            "repository": "https://github.com/Ninel-Valentin/WebRetailProject",
+            "link": null,
+            "documentation": null,
             "MediaPath": "webretail"
         },
         {
@@ -143,9 +139,9 @@
             "technologies": [
                 "C++"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/GraphSearch",
-            "Link": null,
-            "Documentation": null,
+            "repository": "https://github.com/Ninel-Valentin/GraphSearch",
+            "link": null,
+            "documentation": "pathfinderCpp",
             "MediaPath": "pathfinderCpp"
         },
         {
@@ -161,10 +157,9 @@
             "technologies": [
                 "JavaScript"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/WaveFunctionCollapse",
-            "Link": "https://ninel-valentin.github.io/WaveFunctionCollapse/",
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/WaveFunctionCollapse",
+            "link": "https://ninel-valentin.github.io/WaveFunctionCollapse/",
+            "documentation": null
         },
         {
             "id": 1,
@@ -180,10 +175,9 @@
                 "ReactJS",
                 "NodeJS"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/portfolio_v1",
-            "Link": "https://ninel-valentin.github.io/portfolio_v1/public/index",
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/portfolio_v1",
+            "link": "https://ninel-valentin.github.io/portfolio_v1/public/index",
+            "documentation": null
         },
         {
             "id": 0,
@@ -203,10 +197,9 @@
                 "JavaScript",
                 "SQL"
             ],
-            "Repository": "https://github.com/Ninel-Valentin/MessageSender",
-            "Link": null,
-            "Documentation": null,
-            "MediaPath": null
+            "repository": "https://github.com/Ninel-Valentin/MessageSender",
+            "link": null,
+            "documentation": null
         }
     ]
 }

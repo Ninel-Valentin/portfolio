@@ -4,14 +4,14 @@ import collapsableMenuStyles from '../../storage/style/content/collapsableMenu.m
 import projectsMenuStyles from '../../storage/style/content/projectsMenu.module.css';
 
 import projectsData from '../../storage/data/projects.json';
-import CollapsableMenu from "./default/CollapsableMenu";
-import CollapsableMenuEntry from "./default/CollapsableMenuEntry";
+import CollapsableMenu from "./default/CollapsableMenu.js";
+import CollapsableMenuEntry from "./default/CollapsableMenuEntry.js";
 
 import reactUtils from "../../storage/scripts/utils/reactUtils.js";
 import AppInstanceIcon from "../icons/AppInstanceIcon.js";
 import Consts from "../../storage/scripts/utils/Consts.js";
 
-export default class ProjectsContent extends React.Component {
+export default class Projects extends React.Component {
     constructor(props) {
         super(props);
 
@@ -36,8 +36,7 @@ export default class ProjectsContent extends React.Component {
                 id={entry.id}
                 header={header}
                 content={content}
-                getActiveSectionFunction={this.appUtils.getActiveProjectId}
-                setActiveSectionFunction={this.appUtils.setActiveProjectId}
+                sectionName={Consts.applications.foldable.projects}
             />
         });
     }
@@ -55,13 +54,13 @@ export default class ProjectsContent extends React.Component {
             <div className={collapsableMenuStyles.titleSection}>
                 <section>
                     <h2 className={collapsableMenuStyles.title}> {entry.title} </h2>
-                    <span> {this.parseDate(entry)} </span>
+                    <span>{entry.createdDate}</span>
                     <p> {entry.shortDescription} </p>
                 </section>
                 <section>
-                    {entry.Documentation && this.loadGithubDoc(entry, isOdd)}
-                    {entry.Link && this.loadGithubLink(entry, isOdd)}
-                    {entry.Repository && this.loadGithubRepo(entry, isOdd)}
+                    {entry.documentation && this.loadGithubDoc(entry, isOdd)}
+                    {entry.link && this.loadGithubLink(entry, isOdd)}
+                    {entry.repository && this.loadGithubRepo(entry, isOdd)}
                 </section>
             </div>
             {reactUtils.loadSVGWave(false, collapsableMenuStyles.wave)}
@@ -72,14 +71,14 @@ export default class ProjectsContent extends React.Component {
         return <AppInstanceIcon
             className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
             appUtils={this.appUtils}
-            name={entry.Documentation}
+            name={entry.documentation}
             src={Consts.applications.type["localDocument"]} />
     }
 
     loadGithubLink(entry, isOdd) {
         return <a
             className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
-            href={entry.Link} target="_blank">
+            href={entry.link} target="_blank">
             {reactUtils.loadWebIcon()}
         </a>;
     }
@@ -87,7 +86,7 @@ export default class ProjectsContent extends React.Component {
     loadGithubRepo(entry, isOdd) {
         return <a
             className={`${projectsMenuStyles.githubLink} ${isOdd ? projectsMenuStyles.odd : projectsMenuStyles.even}`}
-            href={entry.Repository} target="_blank">
+            href={entry.repository} target="_blank">
             {reactUtils.loadProjectGitHubLink()}
         </a>;
     }
@@ -130,11 +129,5 @@ export default class ProjectsContent extends React.Component {
                 </div>
             </div>
         </>
-    }
-
-    parseDate(entry) {
-        return (<>
-            <span>{entry.createdDate}</span>
-        </>);
     }
 }

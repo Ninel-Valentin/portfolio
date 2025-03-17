@@ -1,6 +1,6 @@
 import React from "react";
 
-import workingStyles from '../../../storage/style/content/working.module.css';
+import workingStyles from '../../../storage/style/content/temp/working.module.css';
 
 export default class PlaceholderContent extends React.Component {
     constructor(props) {
@@ -8,6 +8,9 @@ export default class PlaceholderContent extends React.Component {
     }
 
     render() {
-        return <h1 className={workingStyles.title}> This page is not cooked completely 🍳 <br /> Come back some other time! 👨‍🍳</h1>
+        return <h1 className={workingStyles.title}>
+            This page is not cooked completely 🍳 <br />
+            Visit again soon! 🚀
+        </h1>;
     }
 }

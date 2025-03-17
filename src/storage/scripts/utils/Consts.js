@@ -65,6 +65,11 @@ export default class Consts {
         },
         documentName: {
             "resume": "Ninel-Valentin Bănică CV",
+        },
+        foldable: {
+            "projects": "projects",
+            "history": "history",
+            "achivements": "achivements"
         }
     };
 };

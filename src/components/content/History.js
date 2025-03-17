@@ -8,8 +8,9 @@ import CollapsableMenu from "./default/CollapsableMenu.js";
 import CollapsableMenuEntry from "./default/CollapsableMenuEntry.js";
 
 import reactUtils from "../../storage/scripts/utils/reactUtils.js";
+import Consts from "../../storage/scripts/utils/Consts.js";
 
-export default class HistoryMenu extends React.Component {
+export default class History extends React.Component {
     constructor(props) {
         super(props);
 
@@ -34,8 +35,7 @@ export default class HistoryMenu extends React.Component {
                 id={entry.id}
                 header={header}
                 content={content}
-                getActiveSectionFunction={this.appUtils.getActiveHistoryId}
-                setActiveSectionFunction={this.appUtils.setActiveHistoryId}
+                sectionName={Consts.applications.foldable.history}
             />
         });
     }
