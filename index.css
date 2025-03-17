@@ -35,6 +35,10 @@ body {
     resize: both;
 }
 
+.inline {
+    display: inline-block;
+}
+
 .flipped {
     transform: rotate(180deg);
 }
