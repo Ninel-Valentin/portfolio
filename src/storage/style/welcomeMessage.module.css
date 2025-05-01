@@ -1,8 +1,8 @@
 :root {
-    --welcomeMsg-font-size: 10rem;
+    --welcomeMsg-font-size: max(6dvh,6dvw);
     --welcomeMsg-top: 5dvh;
 
-    --continueMsg-font-size: 2rem;
+    --continueMsg-font-size: 3dvh;
 }
 
 .welcomeP {
@@ -10,7 +10,7 @@
     padding: 0;
     position: absolute;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     font-family: "Courier New", Courier, monospace;
     cursor:default;
 }

@@ -1,11 +1,11 @@
 .container {
     background-color: var(--blue-15);
-    outline: dashed 1rem var(--blue-00);
+    outline: inset max(1vw,1vh) var(--blue-00);
     color: var(--white-03);
-    height: 70vh;
+    height: 50vh;
     width: 76vw;
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 10vw;
     padding: 2vw;
 
@@ -14,6 +14,10 @@
 .title {
     width: 100%;
     text-align: center;
+    font-family: monospace;
 }
 
-.text {}
+.text {
+    text-align:justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

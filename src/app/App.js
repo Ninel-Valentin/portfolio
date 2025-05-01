@@ -56,6 +56,7 @@ export default class App extends React.Component {
                     ...this.getAppData(),
                     deviceType
                 });
+            this.forceUpdateApp();
         });
     }
 

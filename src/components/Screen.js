@@ -36,12 +36,15 @@ export default class Screen extends React.Component {
     }
 
     loadContent() {
-        // if (this.appUtils.getAppData().deviceType == Consts.deviceType.Mobile)
-        //     return <MobileWarning />;
-        
-        return this.shouldShowWelcomeMessage() ?
-            <WelcomeMessage forceUpdateScreen={this.forceUpdateScreen} /> :
-            <DesktopSystem appUtils={this.appUtils} />
+        if (this.shouldShowWelcomeMessage())
+            return <WelcomeMessage
+                deviceType={this.appUtils.getAppData().deviceType}
+                forceUpdateScreen={this.forceUpdateScreen} />;
+
+        if (this.appUtils.getAppData().deviceType == Consts.deviceType.Mobile)
+            return <MobileWarning />;
+
+        return <DesktopSystem appUtils={this.appUtils} />;
     }
 
     shouldShowWelcomeMessage() {

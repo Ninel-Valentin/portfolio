@@ -4,11 +4,13 @@ import welcomeStyles from '../storage/style/welcomeMessage.module.css';
 
 import ApplyTypingAnimation from '../storage/scripts/screen/helloMsgAnimation.js';
 import { setCookie } from '../storage/scripts/CookieManager.js';
+import Consts from '../storage/scripts/utils/Consts.js';
 
 export default class WelcomeMessage extends React.Component {
     constructor(props) {
         super(props);
 
+        this.deviceType = props.deviceType;
         this.forceUpdateScreen = props.forceUpdateScreen;
     }
 
@@ -32,7 +34,8 @@ export default class WelcomeMessage extends React.Component {
                 data-select="continueMsg"
                 className={welcomeStyles.welcomeP}
                 id={welcomeStyles.continueMsg}>
-                Press any button to continue...
+                {this.deviceType == Consts.deviceType.Mobile ?
+                    "Tap anywhere" : "Press any button"} to continue...
             </p>
         </>);
     }

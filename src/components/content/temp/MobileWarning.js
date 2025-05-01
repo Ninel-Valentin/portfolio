@@ -18,8 +18,9 @@ export default class MobileWarning extends React.Component {
                         That's like trying to eat spaghetti with a spoon!
                     </p>
                     <p className={mobileWarningStyles.text}>
-                        For the best experience, switch to a desktop or laptop.
-                        <br />
+                        For the best experience, switch to a desktop or laptop. Or come back at a later date, when the site will be fully optimized for mobile.
+                    </p>
+                    <p className={mobileWarningStyles.text}>
                         Thank you for your understanding!
                     </p>
                 </section>
