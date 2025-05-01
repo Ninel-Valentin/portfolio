@@ -272,7 +272,7 @@ export default class appUtils {
             case 'history':
                 return this.getAppData().content.history;
             case 'projects':
-                return this.getAppData().content.project;
+                return this.getAppData().content.projects;
             case 'achivements':
                 return this.getAppData().content.achivements;
         };

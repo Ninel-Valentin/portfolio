@@ -32,7 +32,7 @@ export default class App extends React.Component {
                 history: {
                     activeId: null
                 },
-                project: {
+                projects: {
                     activeId: null
                 },
                 achivements: {
