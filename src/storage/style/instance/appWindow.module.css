@@ -1,5 +1,6 @@
 :root {
     --menu-bar-height: 2rem;
+    --instance-window-border: 2px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -13,7 +14,7 @@
     min-width: min(80vh, 80vw);
     min-height: calc(.8 * min(80vh, 80vw));
     aspect-ratio: 1.5;
-    border: 2px solid var(--blue-15);
+    border: var(--instance-window-border) solid var(--blue-15);
     border-top: none;
     position: absolute;
     overflow: hidden;

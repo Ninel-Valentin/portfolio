@@ -56,7 +56,7 @@ export default class AboutMe extends React.Component {
                 &nbsp; &nbsp; I'm a <i>software engineering enthusiast</i> with a studying background in <i>electrical engineering</i>, driven by curiosity about how things work. With a strong passion for programming and technology, I have worked on various projects and gained hands-on experience in <i>software development</i> through my work history.
             </p>
             <p>
-                &nbsp; &nbsp; My current focus is on <i>software engineering and data science</i>, aiming to integrate my programming skills with my electrical engineering expertise at some point in the future.
+                &nbsp; &nbsp; My current focus is on <i>embedded systems</i>, aiming to integrate my programming skills with my electrical engineering expertise at some point in the near future.
             </p>
             <p>
                 &nbsp; &nbsp; Beyond coding, I enjoy exploring creative problem-solving through game development and continuously expanding my technical knowledge.

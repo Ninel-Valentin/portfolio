@@ -57,6 +57,6 @@ export default class DefaultInstanceIcon extends React.Component {
     }
 
     loadIconTitle() {
-        return <p> {Consts.applications.title[this.name]} </p>;
+        return <p> <span>{Consts.applications.title[this.name]}</span> </p>;
     }
 };

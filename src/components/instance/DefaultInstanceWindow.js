@@ -34,6 +34,8 @@ export default class DefaultInstanceWindow extends React.Component {
     render() {
         window.addEventListener('mousemove', (e) => {
             if (this.isBeingMoved && !this.appUtils.getMinimizedStatus(this.id)) {
+                if (this.appUtils.getMaximizedStatus(this.id))
+                    this.appUtils.toggleInstanceMaximizedStatus(this.id);
                 this.MoveToTarget(e);
             }
         });
@@ -44,8 +46,16 @@ export default class DefaultInstanceWindow extends React.Component {
         let className = `${styles.appInstanceWindow} unselectable`;
         if (this.appUtils.isIdActive(this.id))
             className += ' active';
-        if (this.appUtils.getInstanceWithId(this.id).isResizable)
-            className += ' resizeable';
+
+        // If we are on mobile, we can't resize the window, so we need to set it to maximized always
+        if (this.appUtils.getAppData().deviceType == Consts.deviceType.Mobile)
+            className += ' maximized';
+        else {
+            if (this.appUtils.getInstanceWithId(this.id).isResizable)
+                className += ' resizeable';
+            if (this.appUtils.getInstanceWithId(this.id).isMaximized)
+                className += ' maximized';
+        }
 
 
         return (<>
@@ -70,8 +80,11 @@ export default class DefaultInstanceWindow extends React.Component {
                 }}>
                 <section
                     onMouseDown={(e) => {
-                        this.isBeingMoved = true;
-                        this.difference = this.GetHoldDifference(e);
+                        // Don't handle click if the target is a menu bar button
+                        if (e.target.className) {
+                            this.isBeingMoved = true;
+                            this.difference = this.GetHoldDifference(e);
+                        }
                     }}
                     className={styles.appMenuBar}>
                     <p>
@@ -83,9 +96,9 @@ export default class DefaultInstanceWindow extends React.Component {
                             )}
                         </span>
                         {
-                        this.src == Consts.applications.type["localDocument"] ?
-                        this.name :
-                        Consts.applications.title[this.name]}
+                            this.src == Consts.applications.type["localDocument"] ?
+                                this.name :
+                                Consts.applications.title[this.name]}
                     </p>
                     <div>
                         {this.RenderMenuBarButtons && this.RenderMenuBarButtons()}
@@ -110,8 +123,15 @@ export default class DefaultInstanceWindow extends React.Component {
             <div
                 onMouseDown={(e) => {
                     this.isBeingMoved = false;
+
+                    let instanceId = this.id;
                     // Set state restored/maximized
-                    this.appUtils.windowActionToggleMaximize(this.id);
+                    this.appUtils.windowActionToggleMaximize(instanceId);
+
+                    // Set active instanceId
+                    this.appUtils.setHighestZIndex(instanceId);
+                    this.appUtils.setActiveInstanceId(instanceId);
+                    this.appUtils.forceUpdateApp();
                 }}
             > ◱ </div>
             <div

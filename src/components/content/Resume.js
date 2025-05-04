@@ -8,8 +8,8 @@ export default class Resume extends React.Component {
     constructor(props) {
         super(props);
 
-        this.downloadName = props.downloadName;
         this.name = props.name;
+        this.downloadName = props.downloadName;
         this.documentFile = reactUtils.loadDocumentFile(this.name);
     }
 

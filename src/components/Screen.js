@@ -41,8 +41,8 @@ export default class Screen extends React.Component {
                 deviceType={this.appUtils.getAppData().deviceType}
                 forceUpdateScreen={this.forceUpdateScreen} />;
 
-        if (this.appUtils.getAppData().deviceType == Consts.deviceType.Mobile)
-            return <MobileWarning />;
+        // if (this.appUtils.getAppData().deviceType == Consts.deviceType.Mobile)
+        //     return <MobileWarning />;
 
         return <DesktopSystem appUtils={this.appUtils} />;
     }

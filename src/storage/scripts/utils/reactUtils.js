@@ -50,9 +50,10 @@ import AboutMe from '../../../components/content/AboutMe.js';
 import Resume from '../../../components/content/Resume.js';
 //#endregion Components
 
-//#region Documents
+//#region Files
 import resumeFile from '../../documents/resume.pdf';
-//#endregion Documents
+import pathfinderCppFile from '../../documents/pathfinderCpp.pdf';
+//#endregion Files
 
 import ProfileImage from '../../img/profile/profile.jpeg';
 import Achivements from '../../../components/content/Achivements.js';
@@ -201,6 +202,8 @@ export default class reactUtils {
         switch (Consts.applications.document[name]) {
             case Consts.applications.document["resume"]:
                 return resumeFile;
+            case Consts.applications.document["pathfinderCpp"]:
+                return pathfinderCppFile;
         }
     }
 }

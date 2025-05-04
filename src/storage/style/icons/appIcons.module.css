@@ -1,5 +1,5 @@
 :root {
-    --windowIcon_height: calc(1 * var(--windowIcon_width));
+    --windowIcon_height: calc(1.2 * var(--windowIcon_width));
     --windowIcon_display_size: calc(.8 * var(--windowIcon_width));
 }
 
@@ -16,6 +16,16 @@
         --windowIcon_width: 4rem;
         --windowIcon_padding: .5rem;
     }
+
+    .windowIcon:hover {
+        background-color: rgba(255, 255, 255, .25);
+    }
+    
+    .windowIcon:active {
+        background-color: rgba(255, 255, 255, 0);
+        outline: 1px solid var(--blue-00);
+    }
+    
 }
 
 .windowIcon {
@@ -34,15 +44,6 @@
     transition: background-color .25s ease-out, outline .25s ease-out, color .25s ease-out;
 }
 
-.windowIcon:hover {
-    background-color: rgba(255, 255, 255, .25);
-}
-
-.windowIcon:active {
-    background-color: rgba(255, 255, 255, 0);
-    outline: 1px solid var(--blue-00);
-}
-
 .windowIcon img,
 .windowIcon svg {
     width: var(--windowIcon_display_size);
@@ -51,10 +52,20 @@
 
 .windowIcon p {
     color: inherit;
-    width: max-content;
+    width: 100%;
+    max-width: var(--windowIcon_width);
     height: calc(var(--windowIcon_height) - var(--windowIcon_display_size));
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.windowIcon p span {
     text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    display: block;
     font-family: monospace;
     font-size: var(--windowIcon_font_size);
 }

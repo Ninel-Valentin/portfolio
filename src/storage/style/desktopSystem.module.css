@@ -5,17 +5,13 @@
 
 @media only screen and (max-width: 600px) {
     :root {
-        --desktop-icons-space: 5rem;
-        --desktop-icons-col-gap: calc((var(--desktop-icons-space) - var(--windowIcon_width))/2);
-        --desktop-icons-row-gap: calc((var(--desktop-icons-space) - var(--windowIcon_height))/2);
+        --desktop-icons-space: 8rem;
     }
 }
 
 @media only screen and (min-width: 600px) {
     :root {
         --desktop-icons-space: 6rem;
-        --desktop-icons-col-gap: calc((var(--desktop-icons-space) - var(--windowIcon_width))/2);
-        --desktop-icons-row-gap: calc((var(--desktop-icons-space) - var(--windowIcon_height))/2);
     }
 }
 

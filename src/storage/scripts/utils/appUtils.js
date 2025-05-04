@@ -195,6 +195,14 @@ export default class appUtils {
         });
     }
 
+    getMaximizedStatus(instanceId) {
+        const instance = this.getInstanceWithId(instanceId);
+        if (!instance)
+            console.log(`No instance found for ${instanceId}`);
+
+        return instance?.isMaximized;
+    }
+
     getMinimizedStatus(instanceId) {
         const instance = this.getInstanceWithId(instanceId);
         if (!instance)
@@ -224,23 +232,23 @@ export default class appUtils {
     }
 
     toggleInstanceMaximizedStatus(instanceIdToModify) {
-        // const appData = this.getAppData();
-        // const appInstances = appData.instances.entries;
+        const appData = this.getAppData();
+        const appInstances = appData.instances.entries;
 
-        // // const currentInstance = this.getInstanceWithId(instanceIdToModify);
-        // for (let appInstance of appInstances)
-        //     if (appInstance.id == instanceIdToModify) {
-        //         appInstance.isMaximized = !appInstance.isMaximized;
-        //         break;
-        //     }
+        // const currentInstance = this.getInstanceWithId(instanceIdToModify);
+        for (let appInstance of appInstances)
+            if (appInstance.id == instanceIdToModify) {
+                appInstance.isMaximized = !appInstance.isMaximized;
+                break;
+            }
 
-        // this.setAppData({
-        //     ...appData,
-        //     instances: {
-        //         ...appData.instances,
-        //         entries: appInstances
-        //     }
-        // });
+        this.setAppData({
+            ...appData,
+            instances: {
+                ...appData.instances,
+                entries: appInstances
+            }
+        });
     }
 
 
