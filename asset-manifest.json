@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bffcdc8.css",
-    "main.js": "/static/js/main.50f69b1c.js",
+    "main.css": "/static/css/main.b6e9fbbf.css",
+    "main.js": "/static/js/main.0aac5315.js",
+    "static/media/pathfinderCpp.pdf": "/static/media/pathfinderCpp.98e1dd5d6ccd77ccdc8d.pdf",
     "static/media/resume.pdf": "/static/media/resume.9b18bb71c04b5e95721a.pdf",
     "static/media/profile.jpeg": "/static/media/profile.8cc738ddd958a0a8d973.jpeg",
     "static/media/aws.png": "/static/media/aws.316da603b6d42393e022.png",
@@ -33,11 +34,11 @@
     "static/media/wave08.svg": "/static/media/wave08.260c5b4bdabec63d612ac7c24fbff7c9.svg",
     "static/media/wave09.svg": "/static/media/wave09.f139d75ac6986dd5f7bd5b014ab6c82e.svg",
     "static/media/os.svg": "/static/media/os.1689f993c42f12c917e4cf0531312b46.svg",
-    "main.6bffcdc8.css.map": "/static/css/main.6bffcdc8.css.map",
-    "main.50f69b1c.js.map": "/static/js/main.50f69b1c.js.map"
+    "main.b6e9fbbf.css.map": "/static/css/main.b6e9fbbf.css.map",
+    "main.0aac5315.js.map": "/static/js/main.0aac5315.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bffcdc8.css",
-    "static/js/main.50f69b1c.js"
+    "static/css/main.b6e9fbbf.css",
+    "static/js/main.0aac5315.js"
   ]
 }

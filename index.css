@@ -62,3 +62,11 @@ body {
         justify-content: flex-start;
     }
 }
+
+.maximized {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: calc(100% - 2 * var(--instance-window-border)) !important;
+    height: calc(100% - var(--taskBar-height) - var(--instance-window-border)) !important;
+}
