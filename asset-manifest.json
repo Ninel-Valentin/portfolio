@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6e9fbbf.css",
-    "main.js": "/static/js/main.0aac5315.js",
+    "main.css": "/static/css/main.80cf8983.css",
+    "main.js": "/static/js/main.d0bfb6c4.js",
     "static/media/pathfinderCpp.pdf": "/static/media/pathfinderCpp.98e1dd5d6ccd77ccdc8d.pdf",
-    "static/media/resume.pdf": "/static/media/resume.9b18bb71c04b5e95721a.pdf",
+    "static/media/resume Banica Ninel-Valentin - Programming.pdf": "/static/media/resume Banica Ninel-Valentin - Programming.ae2b87ff6815eb4bcefb.pdf",
+    "static/media/resume Banica Ninel-Valentin - Electronics.pdf": "/static/media/resume Banica Ninel-Valentin - Electronics.c2cd45d1c48fbab113a1.pdf",
     "static/media/profile.jpeg": "/static/media/profile.8cc738ddd958a0a8d973.jpeg",
     "static/media/aws.png": "/static/media/aws.316da603b6d42393e022.png",
     "static/media/channelsight.png": "/static/media/channelsight.a8dd07af0e4429636aed.png",
+    "static/media/unitbv.png": "/static/media/unitbv.7ea5af12f58f6ff315b1.png",
     "static/media/wallpaper_large.jpg": "/static/media/wallpaper_large.becbfd6c75371f2550a6.jpg",
     "static/media/settings.svg": "/static/media/settings.0679d620a2a2cc76d491c3ed4050d027.svg",
     "static/media/achivements.svg": "/static/media/achivements.07e7f0c33b930045ccea6f5bbe4d4a6a.svg",
@@ -34,11 +36,11 @@
     "static/media/wave08.svg": "/static/media/wave08.260c5b4bdabec63d612ac7c24fbff7c9.svg",
     "static/media/wave09.svg": "/static/media/wave09.f139d75ac6986dd5f7bd5b014ab6c82e.svg",
     "static/media/os.svg": "/static/media/os.1689f993c42f12c917e4cf0531312b46.svg",
-    "main.b6e9fbbf.css.map": "/static/css/main.b6e9fbbf.css.map",
-    "main.0aac5315.js.map": "/static/js/main.0aac5315.js.map"
+    "main.80cf8983.css.map": "/static/css/main.80cf8983.css.map",
+    "main.d0bfb6c4.js.map": "/static/js/main.d0bfb6c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6e9fbbf.css",
-    "static/js/main.0aac5315.js"
+    "static/css/main.80cf8983.css",
+    "static/js/main.d0bfb6c4.js"
   ]
 }
