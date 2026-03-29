@@ -39,7 +39,7 @@ export default class DesktopSystem extends React.Component {
     RenderDesktopIcons() {
         return (<>
             <DirectoryInstanceIcon appUtils={this.appUtils} name="social" />
-            <AppInstanceIcon appUtils={this.appUtils} name="resume" />
+            <DirectoryInstanceIcon appUtils={this.appUtils} name="resumes" />
             <AppInstanceIcon appUtils={this.appUtils} name="achivements" />
             <AppInstanceIcon appUtils={this.appUtils} name="history" />
             <AppInstanceIcon appUtils={this.appUtils} name="projects" />

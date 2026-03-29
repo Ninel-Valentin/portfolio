@@ -2,30 +2,78 @@
     "entries": [
         {
             "id": 0,
-            "title": "Internship",
+            "title": "Research Internship",
             "company": "Siemens Digital Industries Software",
             "logo": "siemens",
-            "startDate": "06.11.2024",
+            "startDate": "01.10.2025",
             "endDate": null,
             "description": [
-                "Migrated an existing multi-language desktop application to Cloud using AWS services.",
-                "Reimplemented a C# desktop interface into React.JS web application."
+                "Researching potential uses for RapidMiner AI Studio from Altair in new and existing solutions and projects.",
+                "Processing and automating data processing pipelines for prediction models of electric and hybrid vessels' fuel consumption and emissions"
             ],
             "softSkills": [
                 "Problem-Solving",
-                "Time Management",
-                "Adaptability",
+                "Data Analysis",
+                "Research",
                 "Communication"
             ],
             "technicalSkills": [
-                "AWS",
-                "C#",
-                "JavaScript",
-                "HTML & CSS"
+                "Python",
+                "Machine Learning",
+                "Altair RapidMiner AI Studio",
+                "Data Processing",
+                "Predictive Modeling"
             ]
         },
         {
             "id": 1,
+            "title": "Digital twin developer Internship",
+            "company": "Siemens Digital Industries Software",
+            "logo": "siemens",
+            "startDate": "01.05.2025",
+            "endDate": "01.10.2025",
+            "description": [
+                "Worked on an existing digital-twin excavator arm project running in Siemens Amesim.",
+                "Improved the project to run in real-time and upgraded the electrical side",
+                "Designed a Raspberry hat PCB with an integrated ADC and connectors to control the arm actuators and to read the potentiometers to measure the movement. (This was done using EasyEDA.com)"
+            ],
+            "softSkills": [
+                "Problem-Solving",
+                "Hardware Design",
+                "System Optimization",
+                "Communication"
+            ],
+            "technicalSkills": [
+                "Linux",
+                "Raspberry Pi",
+                "Electrical Engineering",
+                "Printed Circuit Board (PCB) Design",
+                "Siemens Amesim",
+                "C++"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Full-stack developer Internship",
+            "company": "Siemens Digital Industries Software",
+            "logo": "siemens",
+            "startDate": "06.11.2024",
+            "endDate": "01.05.2025",
+            "description": [
+                "Worked on fullstack development with C# and automotive sensors data processing in C++ for Siemens TestLab."
+            ],
+            "softSkills": [
+                "Problem-Solving",
+                "Time Management",
+                "Communication"
+            ],
+            "technicalSkills": [
+                "C#",
+                "C++"
+            ]
+        },
+        {
+            "id": 3,
             "title": "Summer Internship",
             "company": "Siemens Digital Industries Software",
             "logo": "siemens",
@@ -49,7 +97,52 @@
             ]
         },
         {
-            "id": 2,
+            "id": 4,
+            "title": "Apprenticeship",
+            "company": "University Transylvania of Brasov",
+            "logo": "untibv",
+            "startDate": "01.06.2025",
+            "endDate": "01.09.2025",
+            "description": [
+                "Used Vivado and Vitis to program FPGAs and processors on it.",
+                "Learnt about data transfer protocols.",
+                "Learnt about SEU effects on hardware, error correction and error pattern observation and prevention"
+            ],
+            "softSkills": [
+                "Learning",
+                "Communication",
+                "Attention to Detail"
+            ],
+            "technicalSkills": [
+                "Cisco Packet Tracer",
+                "Networking Fundamentals",
+                "Telecommunications"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Internship",
+            "company": "Mitel Romania",
+            "logo": "mitel",
+            "startDate": "01.05.2025",
+            "endDate": "01.07.2025",
+            "description": [
+                "Participated in company and employees presentations.",
+                "Learnt basics of telecom, Cisco Packet tracer and networks."
+            ],
+            "softSkills": [
+                "Learning",
+                "Communication",
+                "Attention to Detail"
+            ],
+            "technicalSkills": [
+                "Cisco Packet Tracer",
+                "Networking Fundamentals",
+                "Telecommunications"
+            ]
+        },
+        {
+            "id": 6,
             "title": "Junior Web-Crawler Developer",
             "company": "ChannelSight: eCommerce experience",
             "logo": "channelsight",
@@ -62,9 +155,9 @@
             ],
             "softSkills": [
                 "Problem-Solving",
-                "Patience",
+                "Cross-Team Collaboration",
                 "Time Management",
-                "Adaptability"
+                "Initiative"
             ],
             "technicalSkills": [
                 "JavaScript",

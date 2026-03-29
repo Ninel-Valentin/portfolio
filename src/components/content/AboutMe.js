@@ -34,7 +34,13 @@ export default class AboutMe extends React.Component {
                         <span className={aboutStyles.student}>Student</span>
                     </li>
                     <li>
-                        <span className={aboutStyles.dev}>Software developer</span>
+                        <span className={aboutStyles.softwareEng}>Software Engineer</span>
+                    </li>
+                    <li>
+                        <span className={aboutStyles.embeddedSysEng}>Embedded Systems Engineer</span>
+                    </li>
+                    <li>
+                        <span className={aboutStyles.spaceEnth}>Space enthusiast 🚀</span>
                     </li>
                     <li>
                         <span className={aboutStyles.others}>and lots of other things...</span>
@@ -53,13 +59,8 @@ export default class AboutMe extends React.Component {
         return <>
             <h2 className={aboutStyles.contentTitle}>More about myself</h2>
             <p>
-                &nbsp; &nbsp; I'm a <i>software engineering enthusiast</i> with a studying background in <i>electrical engineering</i>, driven by curiosity about how things work. With a strong passion for programming and technology, I have worked on various projects and gained hands-on experience in <i>software development</i> through my work history.
-            </p>
-            <p>
-                &nbsp; &nbsp; My current focus is on <i>embedded systems</i>, aiming to integrate my programming skills with my electrical engineering expertise at some point in the near future.
-            </p>
-            <p>
-                &nbsp; &nbsp; Beyond coding, I enjoy exploring creative problem-solving through game development and continuously expanding my technical knowledge.
+                <p>&nbsp; &nbsp; An <i>embedded systems enthusiast</i> with a studying background in <i>electrical engineering</i> and working expertise in <i>software development</i>, driven by curiosity about how things work.</p>
+                <p>&nbsp; &nbsp; With a strong passion for technology, I have worked on various projects and gained hands-on experience in <i>embedded systems</i> and <i>software development</i> through my work history.</p>
             </p>
         </>
     }

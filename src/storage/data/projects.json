@@ -1,6 +1,48 @@
 {
     "entries": [
         {
+            "id": 11,
+            "title": "Embedded system for satellite imagery and sensor data transmission",
+            "createdDate": "Jun. 2026",
+            "shortDescription": "Gyrosensor-controlled glove with Bluetooth-enabled LCD application for rehabilitation training",
+            "description": [
+                "Designed a multi-sensor, dual-cam (video and IR), ESP32 controlled, PV charging battery system PCB transmitter with a trace antenna;",
+                "Designed an ESP32 controlled receiver with a integrated trace antenna for downloading the satellite data to a laptop;",
+                "Simulated and tunned RF transmission line in Ansys Electrical;",
+                "Programmed data processing and transmission protocols."
+            ],
+            "technologies": [
+                "C++",
+                "Embedded Systems",
+                "Power electronics",
+                "Ansys Electrical",
+                "Printed Circuit Board (PCB) Design",
+                "RF Transmission/Satellite Communication",
+                "Data Processing"
+            ],
+            "repository": null,
+            "documentation": null,
+            "link": null
+        },
+        {
+            "id": 10,
+            "title": "Gyrosensor controlled AVC recovering device",
+            "createdDate": "Jun. 2025",
+            "shortDescription": "Gyrosensor-controlled glove with Bluetooth-enabled LCD application for rehabilitation training",
+            "description": [
+                "Built a battery powered gyrosensor glove which sends control commands via bluetooth to a separate LCD application.",
+                "The application features few games to train dexterity."
+            ],
+            "technologies": [
+                "C++",
+                "Arduino",
+                "Electronics"
+            ],
+            "repository": "https://github.com/Ninel-Valentin/gyrosenzor",
+            "documentation": "gyrosenzor",
+            "link": "https://ninel-valentin.com/"
+        },
+        {
             "id": 9,
             "title": "Desktop portfolio",
             "createdDate": "Dec. 2024",

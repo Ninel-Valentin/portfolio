@@ -1,0 +1,32 @@
+import React from "react";
+
+import resumeStyle from '../../storage/style/content/resume.module.css';
+import reactUtils from "../../storage/scripts/utils/reactUtils";
+
+export default class Resume extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.name = props.name;
+        this.downloadName = props.downloadName;
+        this.documentFile = reactUtils.loadDocumentFile(this.name);
+    }
+
+    render() {
+        return <>
+            {this.downloadName && this.loadDownloadSection()}
+            <section className={resumeStyle.resumeSection}>
+                <iframe src={this.documentFile}></iframe>
+            </section>
+        </>;
+    }
+
+    loadDownloadSection() {
+        return <section className={resumeStyle.resumeSection}>
+            <a className={resumeStyle.resumeLink}
+                href={this.documentFile}
+                download={this.downloadName}
+            > Download document </a>
+        </section>;
+    }
+}

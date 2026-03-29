@@ -35,9 +35,11 @@ import { ReactComponent as Wave10 } from '../../svg/wave/wave10.svg';
 //#region Logos
 import SiemensLogo from '../../img/logo/siemens.png';
 import CSLogo from '../../img/logo/channelsight.png';
+import MitelLogo from '../../img/logo/mitel.png';
 import MCLogo from '../../img/logo/mcdonalds.png';
 import ProfiLogo from '../../img/logo/profi.png';
 import AWSLogo from '../../img/logo/aws.png';
+import UNITBVLogo from '../../img/logo/unitbv.png';
 //#endregion Logos
 
 //#region Components
@@ -51,7 +53,8 @@ import Resume from '../../../components/content/Resume.js';
 //#endregion Components
 
 //#region Files
-import resumeFile from '../../documents/resume.pdf';
+import resumeElectronicsFile from '../../documents/resume Banica Ninel-Valentin - Electronics.pdf';
+import resumeProgrammingFile from '../../documents/resume Banica Ninel-Valentin - Programming.pdf';
 import pathfinderCppFile from '../../documents/pathfinderCpp.pdf';
 //#endregion Files
 
@@ -71,6 +74,8 @@ export default class reactUtils {
             case Consts.applications.type["achivements"]:
                 return <AchivementsIcon />
             case Consts.applications.type["resume"]:
+            case Consts.applications.type["resumeElectronics"]:
+            case Consts.applications.type["resumeProgramming"]:
                 return <ResumeIcon />
             case Consts.applications.type["about"]:
                 return <InfoIcon />
@@ -84,7 +89,6 @@ export default class reactUtils {
                 return <GithubOriginalIcon />
             case Consts.applications.type["directory"]:
                 return <Directory />
-
             case Consts.applications.type["localDocument"]:
                 return <DocumentIcon />
             default:
@@ -106,8 +110,17 @@ export default class reactUtils {
                         href="https://github.com/Ninel-Valentin" />
                     <AppInstanceIcon
                         appUtils={appUtils}
-                        name="mail" 
+                        name="mail"
                         href="mailto:valentinbanica8@gmail.com" />
+                </>);
+            case Consts.applications.name["resumes"]:
+                return (<>
+                    <AppInstanceIcon
+                        appUtils={appUtils}
+                        name="resumeElectronics" />
+                    <AppInstanceIcon
+                        appUtils={appUtils}
+                        name="resumeProgramming" />
                 </>);
             default:
                 return;
@@ -131,10 +144,15 @@ export default class reactUtils {
             case Consts.applications.name["about"]:
                 return <AboutMe
                     appUtils={appUtils} />;
-            case Consts.applications.name["resume"]:
+            case Consts.applications.name["resumeElectronics"]:
                 return <Resume
                     name={name}
-                    downloadName={Consts.applications.documentName["resume"]}
+                    downloadName={Consts.applications.documentName["resumeElectronics"]}
+                />;
+            case Consts.applications.name["resumeProgramming"]:
+                return <Resume
+                    name={name}
+                    downloadName={Consts.applications.documentName["resumeProgramming"]}
                 />;
             case Consts.applications.name["achivements"]:
                 return <Achivements
@@ -150,8 +168,12 @@ export default class reactUtils {
                 return SiemensLogo;
             case 'channelsight':
                 return CSLogo;
+            case 'mitel':
+                return MitelLogo;
             case 'aws':
                 return AWSLogo;
+            case 'untibv':
+                return UNITBVLogo;
         }
     }
 
@@ -200,8 +222,10 @@ export default class reactUtils {
 
     static loadDocumentFile(name) {
         switch (Consts.applications.document[name]) {
-            case Consts.applications.document["resume"]:
-                return resumeFile;
+            case Consts.applications.document["resumeProgramming"]:
+                return resumeProgrammingFile;
+            case Consts.applications.document["resumeElectronics"]:
+                return resumeElectronicsFile;
             case Consts.applications.document["pathfinderCpp"]:
                 return pathfinderCppFile;
         }

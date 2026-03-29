@@ -67,17 +67,27 @@
 
 .descriptionList {
     list-style: circle;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .student {
-    color: var(--blue-03);
-    font-family: math;
+    color: var(--white-03);
+    font-family: 'Comic Sans MS';
 }
 
-.dev {
+.softwareEng {
     color: var(--blue-00);
     font-family: monospace;
+}
+
+.embeddedSysEng {
+    color: var(--blue-01);
+    font-family: 'Courier New';
+}
+
+.spaceEnth {
+    color: var(--blue-03);
+    font-family: math;
 }
 
 .others {
